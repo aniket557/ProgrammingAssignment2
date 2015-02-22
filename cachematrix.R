@@ -1,7 +1,11 @@
-## Put comments here that give an overall description of what your
-## functions do
+## The set of functions here basically asks for a square matrix and return its
+##inverse. Before spitting out the inverse, the set of functions basically first
+##checks for two things: 1) wheather the matrix is square or not by 
+##checking its determinant and 2) wheather the inverse is already in the cache.
 
-## Write a short comment describing this function
+## The makeCacheMatrix basically starts with passing a matrix defined earlier to 
+##the function and then creating a list which uses funcitons on the fly to create
+##inverse.
 
 makeCacheMatrix <- function(x = matrix()) {
   inverse <- NULL
@@ -18,6 +22,8 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
+##the cacheSolve function basically first checks wheather the matrix passed is 
+##square or not and later uses solve to return the inverse.
 
 cacheSolve <- function(x, ...) {
   inverse <- x$getInverse()
